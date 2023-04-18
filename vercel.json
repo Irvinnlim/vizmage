@@ -2,10 +2,10 @@
   "buildCommand": "cd client && npm install && npm run build",
   "outputDirectory": "client/dist",
   "framework": "vite",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/server/(.*)",
-      "destination": "/server/index.js"
+      "src": "/server/(.*)",
+      "dest": "/server/index.js"
     }
   ]
 }
