@@ -2,6 +2,8 @@
 
 ### VizMage AI Image Generator App
 
+![Screenshot from 2023-04-18 18-31-14](https://user-images.githubusercontent.com/110525418/232751252-f347b8df-a138-4cd3-a1d7-1f07a2dcb485.png)
+
 An AI image generator application built with ReactJS and MongoDB, powered by OpenAI's DALL-E image generation model. 
 
 ## Technologies Used
