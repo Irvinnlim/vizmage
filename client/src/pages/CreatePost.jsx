@@ -4,6 +4,8 @@ import { preview } from "../assets";
 import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 const CreatePost = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -18,7 +20,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch("https://vizmage.vercel.app/api/v1/dalle", {
+        const response = await fetch(`${baseURL}/api/v1/dalle`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +47,7 @@ const CreatePost = () => {
       setLoading(true);
 
       try {
-        const response = await fetch("http://localhost:8080/api/v1/post", {
+        const response = await fetch(`${baseURL}/api/v1/post`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

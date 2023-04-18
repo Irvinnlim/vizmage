@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
     return data.map((post) => <Card key={post._id} {...post} />);
@@ -22,7 +24,7 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://vizmage.vercel.app/api/v1/post", {
+        const response = await fetch(`${baseURL}/api/v1/post`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
