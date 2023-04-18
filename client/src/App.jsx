@@ -8,7 +8,11 @@ const App = () => {
     <BrowserRouter>
       <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[E6EBF4]">
         <Link to="/">
-          <img src={logo} alt="logo" className="w-28 object-contain" />
+          <div className="flex items-center">
+            <img src={logo} alt="logo" className="w-10 object-contain" />
+            <h2 className="font-bold text-xl">vizMage</h2>
+          </div>
+          <p>powered by DALL-E</p>
         </Link>
         <Link
           to="/create-post"
