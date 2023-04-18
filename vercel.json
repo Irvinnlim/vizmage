@@ -4,8 +4,8 @@
   "framework": "vite",
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.js"
+      "src": "/server/(.*)",
+      "dest": "/server/index.js"
     }
   ]
 }
